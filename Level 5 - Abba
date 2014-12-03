@@ -36,3 +36,5 @@ and another specific character, then repeats the second specific character follo
 Pretty simple once it's broken down.
 
 Answer: ^(?!.*(.)(.)\2\1)
+
+
