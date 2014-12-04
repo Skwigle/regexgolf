@@ -14,8 +14,10 @@ For the code breakdown, I will try to keep it simple since we went pretty in dep
 ```
 ^                            (?!                                  .*                                  
 Starting from the beginning: Match everything except strings with zero or more characters followed by a
+
 (.)                      (.)                             \2                                         
 specific character and another specific character, then repeats the second specific character followed by
+
 \1                          )
 the first specific character.
 ```
