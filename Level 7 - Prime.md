@@ -8,12 +8,13 @@ After a lot of messing around, trying to wrap my head around this level, I event
 I will admit, I found the code before I understood it. Even while knowing the code and what it is saying, it is still a little confusing, but I will do my best to explain it.
 
 What the code is saying is:
-
-`^     - Begins
+```
+^     - Begins
 (?!   - Do not match any of the strings that match what else is in these parentheses
 (xx+) - There will be two or x's (Or won't be due to "(?!")
 \1+   - However many x's were previously used are used again one or more times
-$)    - Code ends`
+$)    - Code ends
+```
 
 After messing around with the anchor, I think I now grasp why the anchor($) has to be in the parentheses. If you take the  anchor out entirely, then you're giving your code too much freedom and it will just go wacky, matching anything with four or more x's.
 
