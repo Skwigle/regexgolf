@@ -24,6 +24,6 @@ So take a look at the left column. Theres something interesting about the first 
 
 So, the answer we're looking for is : "(...).*\1". (no quotes)
 
-You might have written "^(...).*\1", and that works, but this is Regexgolf, so we're looking for the least amount of characters. So what this expression is claiming is "There are 3 letters, then possibly some random letters after that, but eventually those 3 letters appear again in the exact same order". You might also notice that we left the end open. The reason we dont use anchors in this level is due to words like "anticovenanting". We only need our search to reach "anticovenant". You can continue it if you want, and write it out as "^(...).*\1.*$". That does work, but Regexgolf and all that. Figure you're tired of me stating the obvious...
+You might have written "^(...).\*\1", and that works, but this is Regexgolf, so we're looking for the least amount of characters. So what this expression is claiming is "There are 3 letters, then possibly some random letters after that, but eventually those 3 letters appear again in the exact same order". You might also notice that we left the end open. The reason we dont use anchors in this level is due to words like "anticovenanting". We only need our search to reach "anticovenant". You can continue it if you want, and write it out as "^(...).*\1.*$". That does work, but Regexgolf and all that. Figure you're tired of me stating the obvious...
 
 Answer: (...).*\1
