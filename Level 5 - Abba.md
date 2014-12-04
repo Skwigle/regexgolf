@@ -12,10 +12,12 @@ So how do we fix this? Simple. Anchors! Well.....Anchor. All you need to do is t
 
 For the code breakdown, I will try to keep it simple since we went pretty in depth while creating it:
 ```
-^                            (?!                                  .*                                  (.)
-Starting from the beginning: Match everything except strings with zero or more characters followed by a specific character 
-(.)                             \2                                         \1                                      )
-and another specific character, then repeats the second specific character followed by the first specific character.
+^                            (?!                                  .*                                  
+Starting from the beginning: Match everything except strings with zero or more characters followed by a
+(.)                      (.)                             \2                                         
+specific character and another specific character, then repeats the second specific character followed by
+\1                          )
+the first specific character.
 ```
 Pretty simple once it's broken down.
 
