@@ -9,11 +9,12 @@ That second example might confuse you, but I put it in there just to give you a 
 
 When you look at the first example, you can see a new element (\1). This is a backreference. What it is claiming is "use whatever that first parentheses was". So in the sake of the word "banana", the first period was "b", then we put "a" in parentheses since we'd be using it again. So when we hit the \1, it's calling back to the parentheses that will contain the first "a" in "banana" and reusing it. Still a little confusing? We'll try to break it down further:
 
+```
 . (.) .  \1 .  \1
 b  a  n  a  n  a
          ^     ^
     It's as if both of these are reusing the previous "a" in the parentheses back there.
-
+```
 Now for the second example. If you notice, this example is using "\2" instead of "\1". The reason why is that this example is calling out to the second parentheses. If you look at the example, you will see that I put the first period in parentheses. If I called for "\1" it would assume I was looking for the letter "b". Now that you know about how numbers work in backrefernces, you could even write it out like this:
 .(.)(.)\1\2\1
 Since you are reusing the letter "a" as well as "n", this will work just fine.
